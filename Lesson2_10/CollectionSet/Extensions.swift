@@ -42,6 +42,14 @@ extension ViewController: UICollectionViewDataSource {
     
 }
 
+extension UIView {
+    func addSubviews(_ views: UIView...) {
+        views.forEach {
+            self.addSubview($0)
+        }
+    }
+}
+
 protocol CellProtocol {
     static var identifier: String { get }
     func setupCell(item: CollectionItem)
